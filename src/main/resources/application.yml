@@ -13,7 +13,7 @@ spring:
   cloud:
     config:
       uri: http://config-server.booking-app:8888
-      name: qs-gateway
+      name: admin-service
       username: ${QS_USERNAME}
       password: ${QS_PASSWORD}
       label: main
