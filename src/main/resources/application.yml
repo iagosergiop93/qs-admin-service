@@ -5,21 +5,16 @@ spring:
   application:
     name: admin-service
   profiles:
-    active: dev
-
+    active: ${QS_ENV}
+  
   config:
-    import: configserver:http://localhost:8888
+    import: configserver:http://config-server.booking-app:8888
 
   cloud:
     config:
-      uri: http://localhost:8888/
-      username: 
-      password: 
+      uri: http://config-server.booking-app:8888
+      name: qs-gateway
+      username: ${QS_USERNAME}
+      password: ${QS_PASSWORD}
       label: main
-
-  datasource:
-    driver-class-name: 
-    url: 
-    username: 
-    password: 
-
+      fail-fast: true

@@ -1,13 +1,12 @@
 package com.booking.qs_admin_service.messages.taskscheduler;
 
 import com.booking.qs_admin_service.dtos.tasks.CleanupTimeslotsRequest;
+import com.booking.qs_admin_service.dtos.tasks.CreateTimeslotsRequest;
 import com.booking.qs_admin_service.messages.BaseMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.function.StreamBridge;
 import org.springframework.messaging.support.GenericMessage;
 import org.springframework.stereotype.Component;
-
-import java.util.List;
 
 @Component
 public class TaskSchedulerProducer {
